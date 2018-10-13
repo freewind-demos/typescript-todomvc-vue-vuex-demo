@@ -1,10 +1,10 @@
 import {Vue} from 'vue-property-decorator';
-import {MyStore} from '@/store';
+import {typedStore} from '@/store';
 
-export default class extends Vue {
+export default class MyVue extends Vue {
 
-  get myStore() {
-    return this.$store as MyStore;
+  get store() {
+    return typedStore(this.$store);
   }
 
 }

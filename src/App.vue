@@ -19,7 +19,7 @@
 
     mounted() {
       this.onRouteChange(this.$route);
-      this.myStore.commit(`init`, undefined)
+      this.store.commit.init(undefined)
     }
 
     @Watch('$route')
